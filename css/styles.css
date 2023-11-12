@@ -1,0 +1,245 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-container {
+  background: url('/images/desktop/image-hero.jpg') no-repeat;
+  height: 650px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 10.25rem 0;
+}
+
+.nav-container ul {
+  display: flex;
+  gap: 2rem;
+  font-family: 'Alata', sans-serif;
+  font-size: 0.9375rem;
+}
+
+.title-container {
+  border: 0.125rem solid #fff;
+  width: 650px;
+  margin-top: 8.125rem;
+  margin-left: 10.3125rem;
+  padding: 2.5rem;
+}
+
+.title-container h1 {
+  font-size: 72px;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  line-height: 70px;
+}
+
+.interactive-container {
+  padding: 10rem 10.25rem 11.5rem;
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+
+.float-container {
+  position: absolute;
+  width: 541px;
+  padding: 96px 0 0 96px;
+  left: 734px;
+  background: #fff;
+}
+
+.float-container h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 48px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.float-container div {
+  width: 445px;
+}
+
+.float-container p {
+  font-family: 'Alata', sans-serif;
+  color: hsl(0, 0%, 55%);
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.creations-container {
+  padding: 10rem 10.25rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.creations-container h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.creations-container a {
+  color: #000;
+  border: 1px solid hsl(0, 0%, 41%);
+  padding: 0.8125rem 2.6875rem 0.8125rem 2.375rem;
+  font-family: 'Alata', sans-serif;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  line-height: 0.875rem;
+  letter-spacing: 0.3125rem;
+}
+
+.creations-container__images {
+  padding: 0 10.25rem 11.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.creations-container__img {
+  display: flex;
+  justify-content: start;
+  position: relative;
+  align-items: end;
+}
+
+.creations-container__images p {
+  text-transform: uppercase;
+  position: absolute;
+  color: #fff;
+  bottom: 32px;
+  left: 40px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 300;
+  z-index: 99;
+}
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(1deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.0001) 80%);
+}
+
+.footer-container {
+  background: #000;
+  height: 160px;
+  padding: 2.75rem 10.3125rem;
+}
+
+.footer-container__images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container__social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-container__list {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Alata', sans-serif;
+  font-size: 0.9375rem;
+}
+
+.footer-container__list ul {
+  color: #fff;
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-container__list p {
+  color: hsl(0, 0%, 55%);
+}
+
+
+/* MOBILE */
+@media (max-width: 1276px) {
+  .float-container {
+    left: 548px;
+    padding: 31px 0 0 36px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .interactive-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 10.25rem 96px;
+  }
+
+  .float-container {
+    text-align: center;
+    position: initial;
+    padding: 3rem 0;
+    width: auto;
+  }
+
+  .creations-container {
+    padding: 0 10.25rem 5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-container ul {
+    display: none;
+  }
+
+  .title-container {
+    width: 550px;
+  }
+
+  .title-container h1 {
+    font-size: 3.5rem;
+  }
+}
