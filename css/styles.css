@@ -80,7 +80,7 @@ a {
 
 .float-container {
   position: absolute;
-  width: 541px;
+  max-width: 100%;
   padding: 96px 0 0 96px;
   left: 734px;
   background: #fff;
@@ -107,7 +107,7 @@ a {
 }
 
 .creations-container {
-  padding: 10rem 10.25rem 5rem;
+  padding: 0 10.25rem 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -168,7 +168,7 @@ a {
 
 .footer-container {
   background: #000;
-  height: 160px;
+  height: 100%;
   padding: 2.75rem 10.3125rem;
 }
 
@@ -202,12 +202,24 @@ a {
   color: hsl(0, 0%, 55%);
 }
 
+.creations-container__desktop {
+  display: block;
+}
+
+.creations-container__mobile {
+  display: none;
+}
+
+.footer-container__social-mobile {
+  display: none;
+}
+
 
 /* MOBILE */
 @media (max-width: 1276px) {
   .float-container {
     left: 548px;
-    padding: 31px 0 0 36px;
+    padding: 1.9375rem 0 0 2.25rem;
   }
 }
 
@@ -228,6 +240,10 @@ a {
   .creations-container {
     padding: 0 10.25rem 5rem;
   }
+
+  .creations-container__images p {
+    left: 0;
+  }
 }
 
 @media (max-width: 900px) {
@@ -241,5 +257,72 @@ a {
 
   .title-container h1 {
     font-size: 3.5rem;
+  }
+
+  .creations-container a {
+    display: none;
+  }
+
+  .creations-container {
+    justify-content: center;
+  }
+
+  .creations-container__images {
+    grid-template-columns: 1fr;
+  }
+
+  .creations-container__desktop {
+    display: none;
+  }
+  
+  .creations-container__mobile {
+    display: block;
+  }
+
+  .creations-container__images p {
+    left: 20px;
+  }
+
+  .background-image {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.0001) 80%);
+  }
+
+  .footer-container__images {
+    flex-direction: column;
+  }
+
+  .footer-container__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container__list ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container__social {
+    display: none;
+  }
+
+  .footer-container__social-mobile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 715px) {
+  .title-container {
+    width: 327px;
+    padding: 1.625rem;
+  }
+
+  .title-container h1 {
+    font-size: 3.5rem;
+    line-height: 60px;
   }
 }
